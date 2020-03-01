@@ -14,5 +14,9 @@ namespace Asa.DbContexts
         public DbSet<Insertion> Insertions { get; set; }
         public DbSet<Modification> Modifications { get; set; }
         public DbSet<Deletion> Deletions { get; set; }
+
+        public AppDbContext(DbContextOptions options) : base(options)
+        {
+        }
     }
 }
