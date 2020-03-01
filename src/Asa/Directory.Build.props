@@ -1,0 +1,7 @@
+<Project>
+    <PropertyGroup>
+        <BaseOutputPath>..\..\bin\Asa\</BaseOutputPath>
+        <BaseIntermediateOutputPath>..\..\obj\Asa\</BaseIntermediateOutputPath>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+</Project>
