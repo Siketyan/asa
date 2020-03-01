@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asa", "src\Asa\asa.csproj", "{0C53DB21-130C-4829-9669-89093F0EEB9B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asa", "src\Asa\Asa.csproj", "{0C53DB21-130C-4829-9669-89093F0EEB9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
