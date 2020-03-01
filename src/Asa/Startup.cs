@@ -33,6 +33,8 @@ namespace Asa
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            UpdateDatabase(app);
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -45,6 +47,14 @@ namespace Asa
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+        }
+
+        private static void UpdateDatabase(IApplicationBuilder app)
+        {
+            using var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+            using var context = scope.ServiceProvider.GetService<AppDbContext>();
+            
+            context.Database.Migrate();
         }
     }
 }
