@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asa", "src\Asa\asa.csproj", "{0C53DB21-130C-4829-9669-89093F0EEB9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C53DB21-130C-4829-9669-89093F0EEB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C53DB21-130C-4829-9669-89093F0EEB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C53DB21-130C-4829-9669-89093F0EEB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C53DB21-130C-4829-9669-89093F0EEB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

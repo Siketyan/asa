@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyName>Asa</AssemblyName>
+        <RootNamespace>Asa</RootNamespace>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="obj\asa.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="obj\project.packagespec.json" />
+    </ItemGroup>
+
+</Project>
