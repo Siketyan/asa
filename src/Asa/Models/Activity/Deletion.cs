@@ -1,15 +1,18 @@
-using System;
+using Asa.DbContexts;
 
 namespace Asa.Models.Activity
 {
-    public class Deletion : IActivityModel
+    public class Deletion : ActivityModelBase<Deletion, Deletion.ViewModel>
     {
-        public string Id { get; set; }
+        public class ViewModel : ViewModelBase
+        {
+        }
 
-        public User Author { get; set; }
-
-        public Line Line { get; set; }
-
-        public DateTime CreatedAt { get; set; }
+        public class Transformer : TransformerBase
+        {
+            public Transformer(AppDbContext db) : base(db)
+            {
+            }
+        }
     }
 }

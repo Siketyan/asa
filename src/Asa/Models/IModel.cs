@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Asa.Models
 {
@@ -7,5 +8,10 @@ namespace Asa.Models
         public string Id { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        public interface ITransformer<T, in TViewModel>
+        {
+            public Task<T> TransformAsync(TViewModel viewModel, T model);
+        }
     }
 }
