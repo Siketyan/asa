@@ -1,4 +1,5 @@
 using Asa.DbContexts;
+using Asa.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -26,15 +27,17 @@ namespace Asa
                     Configuration.GetConnectionString("DefaultConnection")
                 );
             });
-            
+
             services.AddControllers();
+
+            services.AddModelTransformers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             UpdateDatabase(app);
-            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -53,7 +56,7 @@ namespace Asa
         {
             using var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
             using var context = scope.ServiceProvider.GetService<AppDbContext>();
-            
+
             context.Database.Migrate();
         }
     }
