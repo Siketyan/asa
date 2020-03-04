@@ -1,5 +1,3 @@
-using System;
-
 namespace Asa.Models.Activity
 {
     public interface IActivityModel : IModel
