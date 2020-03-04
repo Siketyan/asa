@@ -45,7 +45,7 @@ namespace Asa.Controllers
             return entry.Entity;
         }
 
-        [HttpPatch]
+        [HttpPut]
         [Route("{id}")]
         public async Task<T> EditAsync([FromRoute] string id, [FromBody] TViewModel viewModel)
         {
